@@ -317,15 +317,15 @@ header.masthead h2 {
   }
 }
 
-#portfolio1, #portfolio3 {
+#topics, #excursion {
   background-color: #F5F5F5;
 }
 
-#portfolio2, #labweeks {
+#workshops, #labweeks {
   background-color: white;
 }
 
-#wearables, #playful, #creatures, #arvr, #excursion {
+#wearables, #playful, #creatures, #arvr, #excursion1 {
   margin-top: 3.8rem;
 }
 
