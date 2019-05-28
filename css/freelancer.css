@@ -168,7 +168,7 @@ section h2 {
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
-    font-size: 2em;
+    font-size: 1.6em;
     -webkit-transition: font-size 0.3s;
     -moz-transition: font-size 0.3s;
     transition: font-size 0.3s;
@@ -189,7 +189,7 @@ section h2 {
     padding-bottom: 0.5rem;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -233,7 +233,22 @@ header.masthead h2 {
   margin-bottom: 15px;
 }
 
+.topics-item {
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin-bottom: 15px;
+}
+
 .portfolio .portfolio-item .portfolio-item-caption {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background-color: rgba(255, 100, 100, 0.8); /*rgba(24, 188, 156, 0.9)*/
+}
+
+.topics-item .topics-item-caption {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -245,7 +260,15 @@ header.masthead h2 {
   opacity: 1;
 }
 
-.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+.topics-item .topics-item-caption:hover {
+  opacity: 1;
+}
+
+.portfolio .portfolio-item .topics-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.topics-item .topics-item-caption .topics-item-caption-content {
   font-size: 1.5rem;
 }
 
@@ -253,7 +276,7 @@ header.masthead h2 {
   .portfolio {
     margin-bottom: -30px;
   }
-  .portfolio .portfolio-item {
+  .portfolio .portfolio-item .topics-item{
     margin-bottom: 30px;
   }
 }
@@ -300,6 +323,10 @@ header.masthead h2 {
 
 #portfolio2, #labweeks {
   background-color: white;
+}
+
+#wearables, #playful, #creatures, #arvr {
+  margin-top: 3.8rem;
 }
 
 
