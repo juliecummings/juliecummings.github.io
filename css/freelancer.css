@@ -349,6 +349,27 @@ a:focus, a:hover, a:active {
   color: #FF4444;
 }
 
+.words {
+  color: #68C6C2;
+}
+
+.words:focus, .words:hover, .words:active {
+  color: #334992;
+}
+
+.videos{
+  padding:56.25% 0 0 0;
+  position:relative;
+}
+
+.framing{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
 .btn {
   border-width: 2px;
 }
