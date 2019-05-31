@@ -357,6 +357,8 @@ a:focus, a:hover, a:active {
   color: #334992;
 }
 
+
+
 .videos{
   padding:56.25% 0 0 0;
   position:relative;
@@ -369,6 +371,42 @@ a:focus, a:hover, a:active {
   width:100%;
   height:100%;
 }
+
+.framing1{
+  position:absolute;
+  top:0;
+  left:0;
+  width:49%;
+  height:49%;
+}
+.framing2{
+  position:absolute;
+  top:0;
+  left:51%;
+  width:49%;
+  height:49%;
+}
+.framing3{
+  position:absolute;
+  top:51%;
+  left:0;
+  width:49%;
+  height:49%;
+}
+.framing4{
+  position:absolute;
+  top:51%;
+  left:51%;
+  width:49%;
+  height:49%;
+}
+
+.videos2{
+  padding:56.25% 0 0 0;
+  position:relative;
+  margin-bottom: -25%;
+}
+
 
 .btn {
   border-width: 2px;
