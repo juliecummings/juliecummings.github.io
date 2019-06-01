@@ -341,23 +341,6 @@ header.masthead h2 {
   background-color: #1a252f; /* #1a252f #0e153c */
 }
 
-a {
-  color: #FF6464;
-}
-
-a:focus, a:hover, a:active {
-  color: #FF4444;
-}
-
-.words {
-  color: #68C6C2;
-}
-
-.words:focus, .words:hover, .words:active {
-  color: #334992;
-}
-
-
 
 .videos{
   padding:56.25% 0 0 0;
@@ -405,6 +388,27 @@ a:focus, a:hover, a:active {
   padding:56.25% 0 0 0;
   position:relative;
   margin-bottom: -25%;
+}
+
+
+
+
+
+
+a {
+  color: #FF6464;
+}
+
+a:focus, a:hover, a:active {
+  color: #FF4444;
+}
+
+.words {
+  color: #68C6C2;
+}
+
+.words:focus, .words:hover, .words:active {
+  color: #334992;
 }
 
 
