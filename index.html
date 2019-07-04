@@ -375,66 +375,84 @@
               <br><br><img class="img-fluid" src="img/workshops/arduino/generic.png" alt="">
 
               
-              <br><br>For the following assignments, an Arduino Uno board was used. We were provided with an 
+              <br><br>For the following assignments, an Arduino Uno board was used. I was provided with an 
               <b><a class="words" href="img/workshops/arduino/arduinoManualv5.pdf" target="_blank">Arduino Manual v5.0</a></b> containing 13 exercises with sub-exercises. Some of which are shown below.
               <br><br> &#8212; &#9733; &#8212;
               <h5>EXERCISE 3C</h5>
-              Exercise 3 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
+              Exercise 3 is about manipulating multiple LEDs as this was the first introduction of a second LED. After figuring out how to make an individual LED turn off and on, I experimented with the delays and learnt how to make one blink. As a natural progression, I proceeded with making two such LEDs blink with respect to each other. I first attempted to make them blink stimultaneously followed by, in turns. This particular sub-exercise, exercise 3c, was about making one LED blink make twice as fast as the other. Below is a simple illustration I made to clearly describe the understanding of how this works.<br><br>
+              <img class="img-fluid mb-2" src="img/workshops/arduino/illustration.png" alt="">
+
+              <br><br>Above depicts visually the four steps needed in order to achieve this. LED 1 and 2 are on HIGH aka switched on. Next, LED 1 and 2 are on LOW aka switched off. After, only LED 1 (the faster LED) is on HIGH while LED 2 is on LOW. Lastly, both LEDs are on LOW and this cycle repeats itself in a loop. The video on the far right is of my initial outcome while the video of the left and the accompanying code are a result of shortening the delays which I did just because I can and I liked how it looked.
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/3.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 4C</h5>
-              Exercise 4 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
+              Exercise 4 asks that I make one LED gradually light up whilst the other gradually dims down. This exercise brings forth the use of the analogWrite() function which allows me to set the brightness of an LED from 0 (completely off) to 255 (completely on) or anywhere in between. In order for an LED to slowly fade from 0 to 255, a for loop is utilized. In the process of figuring exercise 4c out, I hit a roadbump when I tried to implement a second variable that decreases as opposed to increases into my for loop. Whilst it worked physical for this purpose, I was told that as a general rule of thumb, one does not do such a thing. Still curious about my mistake, I searched the why not of it all after the workshop. As it turns out, it complicates the parameters set within the for loop and wires (variables) will inevitably get criss-crossed. As such, I further discovered that a nested for loop was a possible solution for such a predicament. Irregardless, a simpler solution for the current exercise at hand was to simply take the dewindling LED as the inverse of the illuminating LED by substracting the brightness variable from 255 (the maximum brightness) as seen in the provided code shown below.
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/4.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 6C</h5>
-              Exercise 6 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
+              After previously playing around with using a potmeter value as an analog input by viewing it on the serial monitor and serial plotter, exercise 6 is about controlling an LED with a potmeter. More specifically, making an LED dim or illuminate gradually using a potmeter. To make one LED fade in while the other fades out and vice versa, the analogWrite() function used are similar to that of exercise 4. The difference being that in order to use the analog input received by the potmeter which is on a scale of 0 to 1023 to control the LEDs, the value must first be scaled down to the value of 0 to 255 of which an LED is controlled by. Due to this scaling, the variable sensorValue must be changed to a float as opposed to an integer. The sensor value can be manually scaled down or the map() function can be incorporated. The syntax of this function is map(value, fromLow, fromHigh, toLow, toHigh) where 'value' is the number to map which in this case is the sensorValue, 'fromLow' is the lower bound of the value’s current range, 'fromHigh' is the upper bound of the value’s current range, 'toLow' is the lower bound of the value’s target range and 'toHigh' is the upper bound of the value’s target range.
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/6.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 7</h5>
-              Exercise 7 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
+              Exercise 7 aims is to control the LEDs with light using a Light Dependent Resistor (LDR). An LDR is another kind of sensor and it is a sensitive resistor that measures the amount of light which works like the sensors used to turn street lights on when it gets dark outside. The objective is to make the LEDs fade according to the amount of light that the LDR perceives. Just like with the potmeter, the LDR sensor value, under ideal circumstances, ranges between 0 to 1023. However, the actual range the sensor reaches under my personal lighting conditions would likely be a lot smaller to account for less than optimal variables. To obtain the measured range in practice, I noted down the highest (unobscured) and lowest (obscured) value gathered through the serial monitor. I then used the map() function to define the actual range and to rescale it to the 0-255 range the LED’s accept. Subsequently, I was greeted by blinking LEDs that happened as a result of the sensor value being out of range. As it turns out, the light will completely turn on when the sensor value is a negative number, causing the unanticipated flickering. In order to remedy this, I incorporated the constrain() function to make sure the number is never lower than 0. All functions used (and more) with their accompanying syntax and parameters can be further read up on in the 
+              <b><a class="words" href="https://www.arduino.cc/reference/en/" target="_blank">reference</a></b> on Arduino's site.
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/7.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 8</h5>
-              Exercise 8 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
+              Exercise 8 plays around with the notion of a voltage divider. A voltage divider is a circuit that turns a large input voltage (maximum 5V with the Arduino Uno used) into a smaller output one. Using two resistors and an input voltage, we can create an output voltage that is a fraction of the input. In this exercise, variable resistors, namely Light Dependant Resistors, are used instead of pre-determined ones. When placed in the dark, the resistor should be quite high (approximately 5MΩ or 5000000Ω) and when placed in bright light, it should be quite low (approximately 200Ω). Of course, these numericals are derived with the assumption of ideal circumstances.<br><br>
+
+              The theory is that based off of knowing the input voltage and the resistance range (in the dark and in bright light), I will be able to use the formula below to calculate output voltage, which will then be reflected in the brightness of the LEDs. Theoretically, there are 4 test cases that can be verify this voltage divider / reduction notion by using said formula.
+              <br><br>(INSERT CALCULATIONS)<img class="img-fluid mb-2" src="img/workshops/arduino/theory.png" alt="">
+
+              <br><br><b>TEST CASE 1 &mdash; LDR1 is obscured (in the dark) and the LDR2 is unobscured (in bright light).</b> <br>In such a scenario, the reduced output voltage should be approximately 0.0002 V, as proven in the calculations above. The lower voltage should result in dimmer LEDs.
+
+              <br><br><b>TEST CASE 2 &mdash; LDR1 is unobscured (in bright light) and the LDR2 is obscured (in the dark).</b> <br>In this scenario, the output voltage should reflect 4.99V based on the following calculated estimations. This should bring about brighter LEDs.
+
+              <br><br><b>TEST CASE 3 &mdash; LDR1 and LDR2 are both obscured (in the dark).</b> <br>From calculations made off of the given formula, the output voltage should be 2,5V. This is also consistent with the implication that two resistors of the same value would result in an output voltage that is half of the input voltage.
+
+              <br><br><b>TEST CASE 4 &mdash; LDR1 and LDR2 are both unobscured (in bright light).</b> <br>Just like with test case 3, the output voltage should be 2,5V which once again supports that two resistors of the same value would result in an output voltage that is half of the input voltage.
+
+              <br><br>To test out this theory in practice, I first watch the brightness of the LEDs as the aforementioned test cases were set in motion. Once I was remotely satisfied with the results, I further supported my assumptions through the serial monitor which was scaled down to fit the voltage scale (0-5). In the video provided below, LDR1 is the one shown on the top while LDR2 is the one below it. With regards to test case 1, it was tabulated at approximately 0.5V. With test case 2, it was recorded at around 4.7V. As of test cases 3 and 4, output voltage for both were monitored to be roughly between the range of 2.4V to 2.6V. All of which is in sync with my previously stated theory-based predictions. The slight discrepancies can be accounted for by factoring in that the conditions are sub-optimal at best.
+
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/8.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 9B</h5>
-              Exercise 9 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
+              Up to now, Arduino has only be seen to work standalone. For exercise 9, the Arduino board is used as an input device for the computer by creating a connection between Arduino and Processing. Essentially, the input is passed through the Arduino onto a Processing sketch. This was intimidating to begin with but turned out to be a joy to play with. In the following moving images, I displayed what is happening on the Arduino board itself and how it is brought over to the processing sketch. What I did is to make the placement of the triangles to be determined by the input of the sensor (the potmeter) value. As the potmeter (input) is turned from one end to the other, the triangles move across the screen (output) in the display window. I also played with distinguishing the speed of each triangle by manipulating (multiplying and dividing) the sensor value input that influences the position of the triangle respectively.
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/9.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 10F</h5>
-              Exercise 10 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
+              Exercise 10 is all buttons! A button is debatably the simplest kind of sensor. A button functions by closing a circuit and this can be sensed by the Arduino. In an array of sub-exercises, I practiced using buttons in different ways. In exercise 10f, the final sub-exercise, I was tasked with creating two button interactions where the LED lights up when either one button of the two buttons is pressed but does not when both is pressed. I did so using an if…​else statement. I grouped the possibilities into two: first group being what would result in the LED lighting up. This happens when the top button is pressed and the bottom is not or the bottom button is pressed and the top is not. I also considered including an else if for a second condition which essentially breaks it up into three subsets but settled on it being redundant. However, I observed that the LED would flicker once no matter what I tried. I eventually accepted it as a result of not being able to press both buttons simultaneously.
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/10.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 11B</h5>
               Exercise 11 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/11.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 12B</h5>
               Exercise 12 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/12.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 13B</h5>
               Exercise 13 is about ... +-150 words description
-              THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
+              <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/13.gif" alt=""><br><br>
               </p>
 
