@@ -410,7 +410,7 @@
               Exercise 8 plays around with the notion of a voltage divider. A voltage divider is a circuit that turns a large input voltage (maximum 5V with the Arduino Uno used) into a smaller output one. Using two resistors and an input voltage, we can create an output voltage that is a fraction of the input. In this exercise, variable resistors, namely Light Dependant Resistors, are used instead of pre-determined ones. When placed in the dark, the resistor should be quite high (approximately 5MΩ or 5000000Ω) and when placed in bright light, it should be quite low (approximately 200Ω). Of course, these numericals are derived with the assumption of ideal circumstances.<br><br>
 
               The theory is that based off of knowing the input voltage and the resistance range (in the dark and in bright light), I will be able to use the formula below to calculate output voltage, which will then be reflected in the brightness of the LEDs. Theoretically, there are 4 test cases that can be verify this voltage divider / reduction notion by using said formula.
-              <br><br>(INSERT CALCULATIONS)<img class="img-fluid mb-2" src="img/workshops/arduino/theory.png" alt="">
+              <br><br><img class="img-fluid mb-2" src="img/workshops/arduino/physics.png" alt="">
 
               <br><br><b>TEST CASE 1 &mdash; LDR1 is obscured (in the dark) and the LDR2 is unobscured (in bright light).</b> <br>In such a scenario, the reduced output voltage should be approximately 0.0002 V, as proven in the calculations above. The lower voltage should result in dimmer LEDs.
 
@@ -439,21 +439,33 @@
 
 
               <br><br><br><h5>EXERCISE 11B</h5>
-              Exercise 11 is about ... +-150 words description
+              The intoduction of servo motors is made in exercise 11. More specifically, I was acquainted with the SG90 servo motor which has a rotation span of 160&#176;. The servo is controlled by a special code library. Libraries can be imported by citing "#include <.h>" where the name of the library is inserted followed by dot 'h'. The aim in part b of this exercise is to change the code in a way that the servo will move in a more interesting way &mdash; a funny, rhythmical way, or even teach it how to dance! As I was pondering my favourite songs, I noticed most of them were of a fixed tempo so I tried to make the servo switch direction based on the stress of the words. I eventually went with this song as it was fun to do the twitchy part in sync (close enough) with the singing. This can be found at 00:17 of the video clip. Enjoy!
               <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
-              <img class="img-fluid mb-2" src="img/workshops/arduino/11.gif" alt="">
+                <div class="videos">
+                  <img class="pics11" src="img/workshops/arduino/11.png" alt="">
+                  <video class="framing2" controls>
+                    <source src="img/workshops/arduino/11.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
 
 
-              <br><br><br><h5>EXERCISE 12B</h5>
-              Exercise 12 is about ... +-150 words description
+              <h5>EXERCISE 12B</h5>
+              In exercise 12, I attempted controlling the servo with inputs &mdash; first with a potmeter and then with two buttons. I started of with fusing what was done in exercise 10 and 11. The result was one button brings the servo motor from 0 to 160 and the other from 160 to 0 with one press (and release). A downside to this is the inability to halt the servo mid-route and that it always has to begin or end at 0 or 160. Not quite satisfied with this, I tried an alternative route that does not pre-define the position as a fixed 0 or 160. As opposed to using a for statement for the positon, I constrain the position variable to be within the acceptable range. With this subsequent code, it requires a press and hold to control the servo. Plus, it can change course within the range of 0 and 160. Hence, I prefer the second option as I feel it provides more autonomy or control on the users' part.
               <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS FOLLOWS:<br><br>
               <img class="img-fluid mb-2" src="img/workshops/arduino/12.gif" alt="">
 
 
               <br><br><br><h5>EXERCISE 13B</h5>
-              Exercise 13 is about ... +-150 words description
+              Exercise 13 is all about sound! I had big dreams with this exercise! Firstly, the Arduino board can produce sound when connected to a speaker. This happens with a so-called Piezo speaker (looks like a small black cylinder) that consists of a plate of two different metals that can vibrate and produce sound as such. Each note has a unique frequency. After much deliberation of the huge range of song choices, I went with 'The Final Countdown' by Europe as the tune is so memorable and I found it fitting as this marks the final exercise of the Arduino workshop. While finding out the notes for the song was simple enough, I struggled with the timing &mdash; both the duration of the tune and the pauses in between. It kept being too fast or too slow and I could not quite find a middle ground. Eventually, I found a tempo set by someone else and incorporated it. All in all, I am ecstatic with the outcome!
               <br><br>THE RESULTING CODE AND PHYSICAL MANIFESTATION IS AS SUCH:<br><br>
-              <img class="img-fluid mb-2" src="img/workshops/arduino/13.gif" alt=""><br><br>
+                <div class="videos">
+                  <img class="pics13" src="img/workshops/arduino/13.png" alt="">
+                  <video class="framing2" controls>
+                    <source src="img/workshops/arduino/13.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </p>
 
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -579,7 +591,9 @@
               (INSERT PIC)<br><br><br>
 
               <h5>ASSIGNMENT CV3</h5>
-              Adjust the code of one of the examples so that something cool happens.<br><br>
+              OpenCVMultipleColorTrackingLiveCam
+              <br><strike>OpenCVBrightestPointDetectionLiveCam</strike>
+              <br>Adjust the code of one of the examples so that something cool happens.<br><br>
 
               (INSERT PIC)<br><br><br>
 
