@@ -1,6 +1,5 @@
 body {
   font-family: 'Lato';
-  color: #2C3E50;
 }
 
 h1,
@@ -13,30 +12,13 @@ h6 {
   font-family: 'Montserrat';
 }
 
-#portfolio-modal-4 h1{
-  font-weight: 900;
-  font-family: 'Montserrat';
-  margin-top: -0.9rem;
-  margin-bottom: -2.2rem;
-}
-
-#portfolio-modal-4 h5{
-  margin-top: 0.6rem;
-  margin-bottom: -0.1rem;
-}
-
-#profile{
-  margin-top:-1.3rem;
-}
-
 ul {
     list-style: none;
     padding: 0px;
 }
 
 hr.star-light,
-hr.star-dark,
-hr.star-grey {
+hr.star-dark {
   max-width: 15rem;
   padding: 0;
   text-align: center;
@@ -47,8 +29,7 @@ hr.star-grey {
 }
 
 hr.star-light:after,
-hr.star-dark:after,
-hr.star-grey:after {
+hr.star-dark:after {
   position: relative;
   top: -.8em;
   display: inline-block;
@@ -67,7 +48,6 @@ hr.star-light:after {
   background-color: #000000;
 }
 
-
 hr.star-dark {
   border-color: #2C3E50;
 }
@@ -75,25 +55,6 @@ hr.star-dark {
 hr.star-dark:after {
   color: #2C3E50;
   background-color: white;
-}
-
-
-hr.star-grey {
-  border-color: #2C3E50;
-}
-
-hr.star-grey:after {
-  color: #2C3E50;
-  background-color: #F5F5F5;
-}
-
-#flipped-icon {
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
 }
 
 section {
@@ -184,7 +145,7 @@ section h2 {
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
-    font-size: 1.6em;
+    font-size: 2em;
     -webkit-transition: font-size 0.3s;
     -moz-transition: font-size 0.3s;
     transition: font-size 0.3s;
@@ -205,7 +166,7 @@ section h2 {
     padding-bottom: 0.5rem;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 }
 
@@ -215,8 +176,8 @@ header.masthead {
 }
 
 header.masthead h1 {
-  font-size: 2.2rem;
-  line-height: 2.2rem;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 header.masthead h2 {
@@ -230,26 +191,19 @@ header.masthead h2 {
     padding-bottom: 6rem;
   }
   header.masthead h1 {
-    font-size: 3em;
-    line-height: 3rem;
+    font-size: 4.75em;
+    line-height: 4rem;
   }
   header.masthead h2 {
-    font-size: 1.6em;
+    font-size: 1.75em;
   }
 }
 
 .portfolio {
-  margin-bottom: 15px;
+  margin-bottom: -15px;
 }
 
 .portfolio .portfolio-item {
-  position: relative;
-  display: block;
-  max-width: 25rem;
-  margin-bottom: 15px;
-}
-
-.topics-item {
   position: relative;
   display: block;
   max-width: 25rem;
@@ -264,27 +218,11 @@ header.masthead h2 {
   background-color: rgba(255, 100, 100, 0.8); /*rgba(24, 188, 156, 0.9)*/
 }
 
-.topics-item .topics-item-caption {
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  opacity: 0;
-  background-color: rgba(255, 100, 100, 0.8); /*rgba(24, 188, 156, 0.9)*/
-}
-
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
 }
 
-.topics-item .topics-item-caption:hover {
-  opacity: 1;
-}
-
-.portfolio .portfolio-item .topics-item .portfolio-item-caption .portfolio-item-caption-content {
-  font-size: 1.5rem;
-}
-
-.topics-item .topics-item-caption .topics-item-caption-content {
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
 }
 
@@ -292,7 +230,7 @@ header.masthead h2 {
   .portfolio {
     margin-bottom: -30px;
   }
-  .portfolio .portfolio-item .topics-item{
+  .portfolio .portfolio-item {
     margin-bottom: 30px;
   }
 }
@@ -333,16 +271,64 @@ header.masthead h2 {
   }
 }
 
-#topics, #excursion {
-  background-color: #F5F5F5;
+.floating-label-form-group {
+  position: relative;
+  border-bottom: 1px solid #e9ecef;
 }
 
-#workshops, #labweeks {
-  background-color: white;
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+  font-size: 1.5em;
+  position: relative;
+  z-index: 1;
+  padding-right: 0;
+  padding-left: 0;
+  resize: none;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none !important;
 }
 
-#wearables, #playful, #creatures, #arvr, #excursion1 {
-  margin-top: 3.8rem;
+.floating-label-form-group label {
+  font-size: 0.85em;
+  line-height: 1.764705882em;
+  position: relative;
+  z-index: 0;
+  top: 2em;
+  display: block;
+  margin: 0;
+  -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+  -moz-transition: top 0.3s ease, opacity 0.3s ease;
+  -ms-transition: top 0.3s ease, opacity 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  vertical-align: middle;
+  vertical-align: baseline;
+  opacity: 0;
+}
+
+.floating-label-form-group:not(:first-child) {
+  padding-left: 14px;
+  border-left: 1px solid #e9ecef;
+}
+
+.floating-label-form-group-with-value label {
+  top: 0;
+  opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+  color: #000000;
+}
+
+form .row:first-child .floating-label-form-group {
+  border-top: 1px solid #e9ecef;
+}
+
+#contact {
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1.0)),
+  url(../img/inspiration.jpg) no-repeat fixed;
+  background-size: cover;
 }
 
 
@@ -357,79 +343,6 @@ header.masthead h2 {
   background-color: #1a252f; /* #1a252f #0e153c */
 }
 
-
-.videos{
-  padding:56.25% 0 0 0;
-  position:relative;
-}
-
-.framing{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-}
-
-.framing1{
-  position:absolute;
-  top:0;
-  left:0;
-  width:49%;
-  height:49%;
-}
-.framing2{
-  position:absolute;
-  top:0;
-  left:51%;
-  width:49%;
-  height:49%;
-}
-.framing3{
-  position:absolute;
-  top:51%;
-  left:0;
-  width:49%;
-  height:49%;
-}
-.framing4{
-  position:absolute;
-  top:51%;
-  left:51%;
-  width:49%;
-  height:49%;
-}
-
-.videos2{
-  padding:56.25% 0 0 0;
-  position:relative;
-  margin-bottom: -25%;
-}
-
-.pics11{
-  position:absolute;
-  top:0;
-  left:0;
-  width:49%;
-  height:88%;
-}
-.pics13{
-  position:absolute;
-  top:0;
-  left:0;
-  width:49%;
-  height:75%;
-}
-.picsart{
-  position:absolute;
-  top:0;
-  left:0;
-  width:49%;
-  height:49%;
-}
-
-
-
 a {
   color: #FF6464;
 }
@@ -437,15 +350,6 @@ a {
 a:focus, a:hover, a:active {
   color: #FF4444;
 }
-
-.words {
-  color: #68C6C2;
-}
-
-.words:focus, .words:hover, .words:active {
-  color: #334992;
-}
-
 
 .btn {
   border-width: 2px;
@@ -457,10 +361,6 @@ a:focus, a:hover, a:active {
 
 .bg-secondary {
   background-color: #334992 !important;
-}
-
-.bg-tertiary {
-  background-color: #FFFFFF !important;
 }
 
 .text-primary {
@@ -494,4 +394,161 @@ a:focus, a:hover, a:active {
 .high {
   background-color: #FF6464;
   border-color: #FF6464;
+}
+
+
+
+
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides, .mySlides1 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #222;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+#caption, #caption1 {
+  margin-top: 16px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 10%;
+}
+
+.column1 {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+.demo1 {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.active,
+.demo1:hover {
+  opacity: 1;
+}
+
+
+#heading {
+  padding: 13px;
+  background-color: #000;
+  color: #FFF;
+}
+
+
+
+.love{
+  width: 100%;
+}
+
+.row0 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column0 {
+  flex: 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 4px;
+}
+
+.column0 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column0 {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column0 {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
