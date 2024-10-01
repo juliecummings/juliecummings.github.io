@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Julie | Contact</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap5.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- ............... start header area ............... -->
+  <header class="sticky-top">
+    <div class="container-fluid bg-black">
+      <nav class="navbar navbar-expand-lg navbar-light bg-black p-0">
+        <div class="container p-0">
+          <a class="navbar-brand ms-3 ms-md-0" href="index.html">
+            <img src="assets/img/Logo.png" class="img-fluid logo mt-lg-2" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars text-white fs-1 me-2" aria-hidden="true"></i>
+          </button>
+          <div class="collapse navbar-collapse p-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-0">
+              <li class="nav-item m-0 dropDownWrapper position-relative">
+                <a class="nav-link" id="dropdownOpener" aria-current="page" href="#">portfolio
+                  <i id="dropDownArrow" class="fa fa-chevron-down float-end me-4 mt-1 d-lg-none"
+                    aria-hidden="true"></i></a>
+
+                <div class="dropdownMenu" id="dropDownMenu">
+                  <a class="custom_dropdown_item" href="delft_municipality.html">DELFT MUNICIPALITY</a>
+                  <a class="custom_dropdown_item" href="hire_up.html">HIRE UP</a>
+                  <a class="custom_dropdown_item" href="heembouw.html">HEEMBOUW</a>
+                  <a class="custom_dropdown_item" href="homesick.html">HOMESICK</a>
+                  <a class="custom_dropdown_item" href="graphic_design.html">GRAPHIC DESIGN</a>
+                  <a class="custom_dropdown_item" href="fun_and_play.html">FUN & PLAY</a>
+                </div>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="about.html">about</a>
+              </li>
+              <li class="nav-item active m-0">
+                <a class="nav-link" href="contact-us.html">Contact</a>
+              </li>
+            </ul>
+
+            <div class="d-flex d-lg-none ps-4 py-2">
+              <a class="" href="tel:+31 (0)6 14666746">
+                <img src="assets/img/IconPhoneNumber.png" class="img-fluid" alt="" />
+              </a>
+              <a class="ms-3" href="mailto:cummings3874@gmail.com">
+                <img src="assets/img/IconEmail.png" class="img-fluid" alt="" />
+              </a>
+              <a class="ms-3" href="#">
+                <img src="assets/img/IconLinkedIn.png" class="img-fluid" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- ............... end header area ............... -->
+
+  <!-- ............... start main area ............... -->
+  <main>
+    <!-- start contact form section -->
+    <div class="container contactFrom pt-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 class="fw-bold">Contact Me.</h2>
+          <p class="fw-normal d-block d-md-none">
+            I’d love to hear from you! Do drop me a message with any questions
+            or simply to have a discussion. Let’s create opportunities together.
+          </p>
+          <div class="d-flex flex-md-column mt-md-5">
+            <a href="tel:+31 (0)6 14666746">
+              <div class="d-flex align-items-center me-2 mx-lg-0 my-1 hoverBlue">
+                <img src="assets/img/IconPhoneNumber1.png" class="img-fluid contactIcons blackIcons" alt="" />
+                <img src="assets/img/phoneBlue.png" class="img-fluid contactIcons blueIcons" alt="" />
+                <h5 class="m-0 ms-2 fw-normal d-none d-md-block">
+                  +31 (0)6 14666746
+                </h5>
+              </div>
+            </a>
+            <a href="mailto:cummings3874@gmail.com">
+              <div class="d-flex align-items-center me-2 mx-lg-0 my-1 hoverBlue">
+                <img src="assets/img/IconEmail1.png" class="img-fluid contactIcons blackIcons" alt="" />
+                <img src="assets/img/MessageBlue.png" class="img-fluid contactIcons blueIcons" alt="" />
+                <h5 class="m-0 fw-normal ms-2 d-none d-md-block">
+                  cummings3874@gmail.com
+                </h5>
+              </div>
+            </a>
+            <div class="d-flex align-items-center me-2 mx-lg-0 my-1 hoverBlue">
+              <img src="assets/img/IconLinkedIn1.png" class="img-fluid contactIcons blackIcons" alt="" />
+              <img src="assets/img/linkedinBlue.png" class="img-fluid contactIcons blueIcons" alt="" />
+              <h5 class="m-0 ms-2 fw-normal d-none d-md-block">
+                Julie Cummings
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <p class="fw-normal d-none d-md-block">
+            I’d love to hear from you! Do drop me a message with any questions
+            or simply to have a discussion. Let’s create opportunities together.
+          </p>
+          <form method="post" id="contact_form" action="sendmail.php">
+            <div class="row mt-4">
+              <div class="col-lg-5 my-2">
+                <div class="position-relative">
+                  <input type="text" class="w-100 form-control contact-field" name="name" placeholder="Name" />
+                </div>
+              </div>
+              <div class="col-lg-7 my-2">
+                <div class="position-relative">
+                  <input type="text" class="w-100 form-control contact-field" name="email"
+                    placeholder="Email Address" />
+                </div>
+              </div>
+              <div class="col-12 my-2">
+                <div class="position-relative">
+                  <textarea class="w-100 form-control contact-field" name="message" rows="4"
+                    placeholder="Message from You to Me"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="text-end">
+                  <button class="sendBtn my-2" id="submitBtn" type="submit">Send Message</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        </form>
+
+        <!-- success modal -->
+        <div class="modal fade" id="success_modal" tabindex="-1" aria-labelledby="success modal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded_20 border-0">
+              <div class="modal-body text-center">
+                <div class="display-5 text-success">
+                  <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                </div>
+                <p class="text-dark">
+                  Whoop whoop! Thanks for reaching out, I’ll get back to you in
+                  a jiffy (2 days max).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- error modal -->
+        <div class="modal fade" id="error_modal" tabindex="-1" aria-labelledby="error modal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded_20 border-0">
+              <div class="modal-body text-center">
+                <div class="display-5 text-danger">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                </div>
+                <p class="text-dark">
+                  Failed to send email. Please try again later.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-10 col-md-9">
+          <img src="assets/img/Signature.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- end contact form section -->
+  </main>
+  <!-- ............... end main area ............... -->
+
+  <!-- ............... start footer area ............... -->
+  <footer>
+    <div class="container-fluid bg-black py-4 text-light text-center">
+      <h6 class="m-0 my-2 fs_xsm">
+        Copyright &copy; 2023 Julie Cummings. Designed with Care.
+      </h6>
+    </div>
+  </footer>
+  <!-- ............... end footer area ............... -->
+  <script src="assets/js/jquery-3.6.4.min.js"></script>
+  <script src="assets/js/bootstrap5.bundle.min.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script src="assets/js/additional-methods.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

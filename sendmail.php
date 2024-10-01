@@ -5,10 +5,10 @@
         $message = $_POST["message"];
 
         // Set up the sender email address (create from cpanel)
-        $from="33983778+julieccummings@users.noreply.github.com"; 
+        $from="demo@server.com"; 
 
         // Set up the recipient email address (your Gmail)
-        $to = "cummings3874@gmail.com"; 
+        $to = "abc@gmail.com"; 
 
         // Set up the email subject
         $subject = "New Contact Form Submission";

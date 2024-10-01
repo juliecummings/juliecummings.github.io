@@ -588,7 +588,7 @@ a {
 .heembouw-item3 {
   background: var(--bg_white);
   width: 100%;
-  height: 265px;
+  height: 356px;
   position: relative;
 }
 
@@ -702,6 +702,9 @@ a {
   font-weight: 400;
   font-size: 20px;
   color: var(--c_black);
+  text-indent: -1.2em;
+  padding-left: 1em;
+  margin-left: 0.2em;
 }
 
 /* research-section */
@@ -868,7 +871,7 @@ a {
   font-weight: 900;
   font-size: 29px;
   display: block;
-  color: var(--c_primary);
+  color: var(--c_primary) !important;
   text-align: center;
   background: var(--bg_white);
   padding: 10px 5px;
@@ -877,7 +880,7 @@ a {
 
 .solution-inner1 a:nth-of-type(1) {
   background: var(--bg_black);
-  color: var(--c_white);
+  color: var(--c_white) !important;
 }
 
 .solution-inner p {
@@ -1099,7 +1102,7 @@ a {
     }
 
     .heembouw-item1 {
-        max-width: 100%;
+        max-width: 350px;
         padding: 25px 20px;
         margin: auto;
     }
@@ -1204,14 +1207,14 @@ a {
 
     .heembouw-item3 {
         background: var(--bg_light2);
-        max-width: 100%;
+        max-width: 275px;
         height: 56px;
         margin: auto;
         margin-top: -34px;
     }
 
     .heembouw-item1 {
-        max-width: 100%;
+        max-width: 275px;
         padding: 25px 20px;
         margin: auto;
     }
@@ -1473,3 +1476,59 @@ a {
 
 }
 /* ................. end heembouw page ................. */
+
+/* ................. start delft municipality page ................. */
+.img_boxWrapper{
+  border: 1px solid var(--c_black);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.img_boxTitle{
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--c_white);
+  padding: 5px;
+  text-align: center;
+  background-color: var(--bg_black);
+}
+.img_box{
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.img_boxWrapper img{
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media(min-width:768px){
+  .col-md-3_5{
+    width:29.16% ;
+  }
+}
+/* ................. end delft municipality page ................. */
+
+/* ................. start homesick page ................. */
+.fs_sm{
+  font-size: 16px !important;
+}
+.fs_xsm{
+  font-size: 14px !important;
+}
+@media(max-width:767.98px){
+  .fs_sm{
+    font-size: 14px !important;
+  }
+  .fs_xsm{
+    font-size: 12px !important;
+  }
+}
+/* ................. end homesick page ................. */
