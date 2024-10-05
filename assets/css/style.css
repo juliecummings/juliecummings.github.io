@@ -647,7 +647,7 @@ a {
 
 .client-pg-main p {
   font-weight: 700;
-  font-size: 38px;
+  font-size: 36px;
   color: var(--c_white);
 }
 
@@ -1532,3 +1532,108 @@ a {
   }
 }
 /* ................. end homesick page ................. */
+/* ................. start extra code ................. */
+.nav_optsBar{
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin-top: 35px;
+}
+.nav_opts{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: absolute;
+  left: 100%;
+  bottom: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: none;
+}
+.nav_optsBar:hover .nav_opts{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav_opts .nav_opt{
+  margin: 0px !important;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  color: var(--c_black) !important;
+  background: var(--bg_white) !important;
+  border-color: var(--c_black) !important;
+}
+.nav_opts .nav_opt:hover{
+  color: var(--c_white) !important;
+  background: var(--bg_black) !important;
+  border-color: var(--c_white) !important;
+}
+.sec_py{
+  padding: 90px 0px 60px 0px;
+}
+.sec_title {
+  font-weight: 900;
+  font-size: 29px;
+  color: var(--c_white);
+  text-transform: uppercase;
+  padding: 16px;
+  background: var(--bg_black);
+  text-align: center;
+  margin-bottom: 0px;
+}
+.sec_subtitle{
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 1.2;
+  display: block;
+  color: var(--c_primary) !important;
+  text-align: center;
+  background: var(--bg_white);
+  padding: 10px 5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border: 2px solid var(--c_black)
+}
+.sec_desc{
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--c_black);
+}
+.mb_lg{
+  margin-bottom: 60px;
+}
+.border_black{
+  border: 2px solid var(--c_black);
+}
+@media screen and (max-width: 1199.98px) {
+  .nav_opts,
+  .nav_optsBar:hover .nav_opts{
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .sec_py{
+    padding: 60px 0px 40px 0px;
+  }
+  .sec_title {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .sec_subtitle{
+    font-size: 16px;
+    padding: 8px 4px;
+  }
+  .sec_desc {
+    font-size: 16px;
+  }
+  .mb_lg{
+    margin-bottom: 30px;
+  }
+  .nav_optsBar{
+    margin-top: 24px;
+  }
+}
+/* ................. end extra code ................. */
