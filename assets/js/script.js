@@ -21,6 +21,21 @@ $(document).ready(function () {
     }
   });
 
+  /* .............. flipbook .............. */
+  var $flipbookEL = $('#flipbook');
+
+  $(window).on('resize', function () {
+    $flipbookEL.css({
+      width: '',
+      height: ''
+    });
+    $flipbookEL.turn('size', $flipbookEL[0].clientWidth, $flipbookEL[0].clientHeight);
+  });
+  $flipbookEL.turn({
+    pages: 40,
+		autoCenter: true
+	});
+
   /* .............. contact form .............. */
   $("#contact_form").validate({
     rules: {
